@@ -529,3 +529,125 @@ java.lang.IllegalArgumentException: Attribute name cannot be null or empty
 2022-09-29 13:17:43.131  INFO 4884 --- [http-nio-80-exec-2] com.cczj.blog.aspect.LogAspects          : Result : index
 2022-09-29 13:17:44.263  INFO 4884 --- [http-nio-80-exec-3] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/footer/newBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.newBlogs', args=[{}]}
 2022-09-29 13:17:44.472  INFO 4884 --- [http-nio-80-exec-3] com.cczj.blog.aspect.LogAspects          : Result : commons :: newBlogList
+2022-09-29 13:25:31.277  INFO 4884 --- [http-nio-80-exec-3] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], org.apache.catalina.session.StandardSessionFacade@4a731f66, {}]}
+2022-09-29 13:25:31.915  INFO 4884 --- [http-nio-80-exec-3] com.cczj.blog.aspect.LogAspects          : Result : index
+2022-09-29 13:25:32.432  INFO 4884 --- [http-nio-80-exec-5] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/footer/newBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.newBlogs', args=[{}]}
+2022-09-29 13:25:32.596  INFO 4884 --- [http-nio-80-exec-5] com.cczj.blog.aspect.LogAspects          : Result : commons :: newBlogList
+2022-09-29 13:26:55.015  INFO 4884 --- [http-nio-80-exec-8] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], org.apache.catalina.session.StandardSessionFacade@4a731f66, {}]}
+2022-09-29 13:26:55.609  INFO 4884 --- [http-nio-80-exec-8] com.cczj.blog.aspect.LogAspects          : Result : index
+2022-09-29 13:26:56.268  INFO 4884 --- [http-nio-80-exec-1] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/footer/newBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.newBlogs', args=[{}]}
+2022-09-29 13:26:56.422  INFO 4884 --- [http-nio-80-exec-1] com.cczj.blog.aspect.LogAspects          : Result : commons :: newBlogList
+2022-09-29 13:30:25.812  INFO 4884 --- [http-nio-80-exec-2] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], org.apache.catalina.session.StandardSessionFacade@4a731f66, {}]}
+2022-09-29 13:30:26.802  INFO 4884 --- [http-nio-80-exec-2] com.cczj.blog.aspect.LogAspects          : Result : index
+2022-09-29 13:30:27.759  INFO 4884 --- [http-nio-80-exec-4] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/footer/newBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.newBlogs', args=[{}]}
+2022-09-29 13:30:27.950  INFO 4884 --- [http-nio-80-exec-4] com.cczj.blog.aspect.LogAspects          : Result : commons :: newBlogList
+2022-09-29 13:38:07.636  INFO 4884 --- [http-nio-80-exec-2] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], org.apache.catalina.session.StandardSessionFacade@4a731f66, {}]}
+2022-09-29 13:38:08.251  INFO 4884 --- [http-nio-80-exec-2] com.cczj.blog.aspect.LogAspects          : Result : index
+2022-09-29 13:38:08.769  INFO 4884 --- [http-nio-80-exec-5] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/footer/newBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.newBlogs', args=[{}]}
+2022-09-29 13:38:08.926  INFO 4884 --- [http-nio-80-exec-5] com.cczj.blog.aspect.LogAspects          : Result : commons :: newBlogList
+2022-09-29 13:39:39.159  INFO 4884 --- [http-nio-80-exec-8] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/types/4', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.TypeController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 4, {}]}
+2022-09-29 13:39:44.174  WARN 4884 --- [http-nio-80-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@fb0f215 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-09-29 13:39:46.581  INFO 4884 --- [http-nio-80-exec-6] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/blog/6', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.blog', args=[6, {}]}
+2022-09-29 13:39:49.182  WARN 4884 --- [http-nio-80-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@51dec9ca (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-09-29 13:39:51.592  WARN 4884 --- [http-nio-80-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@48281808 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-09-29 13:39:54.189  WARN 4884 --- [http-nio-80-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@584b841d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-09-29 13:39:56.601  WARN 4884 --- [http-nio-80-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2deec951 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-09-29 13:39:59.200  WARN 4884 --- [http-nio-80-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@efc0298 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-09-29 13:40:01.612  WARN 4884 --- [http-nio-80-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4721621d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-09-29 13:40:04.211  WARN 4884 --- [http-nio-80-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@294b1a14 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-09-29 13:40:04.529  INFO 4884 --- [http-nio-80-exec-8] com.cczj.blog.aspect.LogAspects          : Result : types
+2022-09-29 13:40:05.279  INFO 4884 --- [http-nio-80-exec-8] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/footer/newBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.newBlogs', args=[{}]}
+2022-09-29 13:40:05.444  INFO 4884 --- [http-nio-80-exec-8] com.cczj.blog.aspect.LogAspects          : Result : commons :: newBlogList
+2022-09-29 13:40:06.623  WARN 4884 --- [http-nio-80-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@29ae520e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-09-29 13:40:06.918  INFO 4884 --- [http-nio-80-exec-6] com.cczj.blog.aspect.LogAspects          : Result : blog
+2022-09-29 13:40:07.397  INFO 4884 --- [http-nio-80-exec-9] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/footer/newBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.newBlogs', args=[{}]}
+2022-09-29 13:40:07.448  INFO 4884 --- [http-nio-80-exec-5] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/comments/6', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.CommentController.comments', args=[6, {}]}
+2022-09-29 13:40:07.531  INFO 4884 --- [http-nio-80-exec-5] com.cczj.blog.aspect.LogAspects          : Result : blog :: commentList
+2022-09-29 13:40:07.557  INFO 4884 --- [http-nio-80-exec-9] com.cczj.blog.aspect.LogAspects          : Result : commons :: newBlogList
+2022-09-29 13:40:16.788  INFO 4884 --- [http-nio-80-exec-2] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], org.apache.catalina.session.StandardSessionFacade@4a731f66, {}]}
+2022-09-29 13:40:17.395  INFO 4884 --- [http-nio-80-exec-2] com.cczj.blog.aspect.LogAspects          : Result : index
+2022-09-29 13:40:18.205  INFO 4884 --- [http-nio-80-exec-10] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/footer/newBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.newBlogs', args=[{}]}
+2022-09-29 13:40:18.366  INFO 4884 --- [http-nio-80-exec-10] com.cczj.blog.aspect.LogAspects          : Result : commons :: newBlogList
+2022-09-29 13:40:20.281  INFO 4884 --- [http-nio-80-exec-3] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/blog/2', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.blog', args=[2, {}]}
+2022-09-29 13:40:20.477  INFO 4884 --- [http-nio-80-exec-3] com.cczj.blog.aspect.LogAspects          : Result : blog
+2022-09-29 13:40:20.770  INFO 4884 --- [http-nio-80-exec-1] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/footer/newBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.newBlogs', args=[{}]}
+2022-09-29 13:40:20.795  INFO 4884 --- [http-nio-80-exec-10] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/comments/2', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.CommentController.comments', args=[2, {}]}
+2022-09-29 13:40:20.857  INFO 4884 --- [http-nio-80-exec-10] com.cczj.blog.aspect.LogAspects          : Result : blog :: commentList
+2022-09-29 13:40:20.931  INFO 4884 --- [http-nio-80-exec-1] com.cczj.blog.aspect.LogAspects          : Result : commons :: newBlogList
+2022-09-29 13:42:49.065  INFO 4884 --- [http-nio-80-exec-3] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], org.apache.catalina.session.StandardSessionFacade@4a731f66, {}]}
+2022-09-29 13:42:49.680  INFO 4884 --- [http-nio-80-exec-3] com.cczj.blog.aspect.LogAspects          : Result : index
+2022-09-29 13:42:50.460  INFO 4884 --- [http-nio-80-exec-7] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/footer/newBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.newBlogs', args=[{}]}
+2022-09-29 13:42:50.623  INFO 4884 --- [http-nio-80-exec-7] com.cczj.blog.aspect.LogAspects          : Result : commons :: newBlogList
+2022-09-29 13:42:54.097  INFO 4884 --- [http-nio-80-exec-9] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/blog/2', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.blog', args=[2, {}]}
+2022-09-29 13:42:54.296  INFO 4884 --- [http-nio-80-exec-9] com.cczj.blog.aspect.LogAspects          : Result : blog
+2022-09-29 13:42:54.670  INFO 4884 --- [http-nio-80-exec-3] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/footer/newBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.newBlogs', args=[{}]}
+2022-09-29 13:42:54.698  INFO 4884 --- [http-nio-80-exec-1] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/comments/2', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.CommentController.comments', args=[2, {}]}
+2022-09-29 13:42:54.758  INFO 4884 --- [http-nio-80-exec-1] com.cczj.blog.aspect.LogAspects          : Result : blog :: commentList
+2022-09-29 13:42:54.829  INFO 4884 --- [http-nio-80-exec-3] com.cczj.blog.aspect.LogAspects          : Result : commons :: newBlogList
+2022-09-29 13:42:58.440  INFO 4884 --- [http-nio-80-exec-10] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.TypeController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2022-09-29 13:42:58.755  INFO 4884 --- [http-nio-80-exec-10] com.cczj.blog.aspect.LogAspects          : Result : types
+2022-09-29 13:42:59.260  INFO 4884 --- [http-nio-80-exec-5] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/footer/newBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.newBlogs', args=[{}]}
+2022-09-29 13:42:59.414  INFO 4884 --- [http-nio-80-exec-5] com.cczj.blog.aspect.LogAspects          : Result : commons :: newBlogList
+2022-09-29 13:43:05.685  INFO 4884 --- [http-nio-80-exec-10] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/types/4', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.TypeController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 4, {}]}
+2022-09-29 13:43:05.997  INFO 4884 --- [http-nio-80-exec-10] com.cczj.blog.aspect.LogAspects          : Result : types
+2022-09-29 13:43:06.444  INFO 4884 --- [http-nio-80-exec-3] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/footer/newBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.newBlogs', args=[{}]}
+2022-09-29 13:43:06.658  INFO 4884 --- [http-nio-80-exec-3] com.cczj.blog.aspect.LogAspects          : Result : commons :: newBlogList
+2022-09-29 13:43:12.892  INFO 4884 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-29 13:43:12.894  INFO 4884 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-09-29 13:43:12.899  INFO 4884 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2022-09-29 13:45:00.736  INFO 19108 --- [restartedMain] com.cczj.blog.BlogApplication            : Starting BlogApplication using Java 11.0.2 on LAPTOP-RD663NNS with PID 19108 (C:\Users\18446\IdeaProjects\blog\target\classes started by www in C:\Users\18446\IdeaProjects\blog)
+2022-09-29 13:45:00.736 DEBUG 19108 --- [restartedMain] com.cczj.blog.BlogApplication            : Running with Spring Boot v2.7.4, Spring v5.3.23
+2022-09-29 13:45:00.737  INFO 19108 --- [restartedMain] com.cczj.blog.BlogApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-09-29 13:45:00.765  INFO 19108 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-29 13:45:00.765  INFO 19108 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-29 13:45:01.313  INFO 19108 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-29 13:45:01.362  INFO 19108 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 5 JPA repository interfaces.
+2022-09-29 13:45:01.881  INFO 19108 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2022-09-29 13:45:01.888  INFO 19108 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-29 13:45:01.888  INFO 19108 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-29 13:45:01.944  INFO 19108 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-29 13:45:01.944  INFO 19108 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1179 ms
+2022-09-29 13:45:02.075  INFO 19108 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-29 13:45:02.110  INFO 19108 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-09-29 13:45:02.203  INFO 19108 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-29 13:45:02.261  INFO 19108 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-29 13:45:02.788  INFO 19108 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-29 13:45:02.804  INFO 19108 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-29 13:45:03.776  INFO 19108 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-29 13:45:03.781  INFO 19108 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-29 13:45:04.359  WARN 19108 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-29 13:45:04.506  INFO 19108 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-09-29 13:45:04.784  INFO 19108 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-29 13:45:04.816  INFO 19108 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2022-09-29 13:45:04.825  INFO 19108 --- [restartedMain] com.cczj.blog.BlogApplication            : Started BlogApplication in 4.381 seconds (JVM running for 6.437)
+2022-09-29 13:45:13.834  INFO 19108 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-29 13:45:13.835  INFO 19108 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-29 13:45:13.835  INFO 19108 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-09-29 13:45:14.079  WARN 19108 --- [http-nio-80-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [221] milliseconds.
+2022-09-29 13:45:14.084  INFO 19108 --- [http-nio-80-exec-1] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], org.apache.catalina.session.StandardSessionFacade@2a19c24b, {}]}
+2022-09-29 13:45:14.539  WARN 19108 --- [http-nio-80-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2022-09-29 13:45:14.674  WARN 19108 --- [http-nio-80-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2022-09-29 13:45:14.807  INFO 19108 --- [http-nio-80-exec-1] com.cczj.blog.aspect.LogAspects          : Result : index
+2022-09-29 13:45:15.885  INFO 19108 --- [http-nio-80-exec-5] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/footer/newBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.newBlogs', args=[{}]}
+2022-09-29 13:45:16.060  INFO 19108 --- [http-nio-80-exec-5] com.cczj.blog.aspect.LogAspects          : Result : commons :: newBlogList
+2022-09-29 13:45:18.811  INFO 19108 --- [http-nio-80-exec-9] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.TypeController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2022-09-29 13:45:19.137  INFO 19108 --- [http-nio-80-exec-9] com.cczj.blog.aspect.LogAspects          : Result : types
+2022-09-29 13:45:19.641  INFO 19108 --- [http-nio-80-exec-4] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/footer/newBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.newBlogs', args=[{}]}
+2022-09-29 13:45:19.808  INFO 19108 --- [http-nio-80-exec-4] com.cczj.blog.aspect.LogAspects          : Result : commons :: newBlogList
+2022-09-29 13:45:20.920  INFO 19108 --- [http-nio-80-exec-9] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.TagController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2022-09-29 13:45:21.346  INFO 19108 --- [http-nio-80-exec-9] com.cczj.blog.aspect.LogAspects          : Result : tags
+2022-09-29 13:45:21.818  INFO 19108 --- [http-nio-80-exec-4] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/footer/newBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.newBlogs', args=[{}]}
+2022-09-29 13:45:21.985  INFO 19108 --- [http-nio-80-exec-4] com.cczj.blog.aspect.LogAspects          : Result : commons :: newBlogList
+2022-09-29 13:45:23.310  INFO 19108 --- [http-nio-80-exec-9] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], org.apache.catalina.session.StandardSessionFacade@2a19c24b, {}]}
+2022-09-29 13:45:23.916  INFO 19108 --- [http-nio-80-exec-9] com.cczj.blog.aspect.LogAspects          : Result : index
+2022-09-29 13:45:24.415  INFO 19108 --- [http-nio-80-exec-1] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/footer/newBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.newBlogs', args=[{}]}
+2022-09-29 13:45:24.582  INFO 19108 --- [http-nio-80-exec-1] com.cczj.blog.aspect.LogAspects          : Result : commons :: newBlogList
+2022-09-29 13:45:28.775  INFO 19108 --- [http-nio-80-exec-3] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/blog/1', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.blog', args=[1, {}]}
+2022-09-29 13:45:29.007  INFO 19108 --- [http-nio-80-exec-3] com.cczj.blog.aspect.LogAspects          : Result : blog
+2022-09-29 13:45:29.369  INFO 19108 --- [http-nio-80-exec-2] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/footer/newBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.newBlogs', args=[{}]}
+2022-09-29 13:45:29.474  INFO 19108 --- [http-nio-80-exec-4] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/comments/1', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.CommentController.comments', args=[1, {}]}
+2022-09-29 13:45:29.529  INFO 19108 --- [http-nio-80-exec-2] com.cczj.blog.aspect.LogAspects          : Result : commons :: newBlogList
+2022-09-29 13:45:29.539  INFO 19108 --- [http-nio-80-exec-4] com.cczj.blog.aspect.LogAspects          : Result : blog :: commentList
+2022-09-29 13:45:44.557  INFO 19108 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-29 13:45:44.559  INFO 19108 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-29 13:45:44.564  INFO 19108 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
