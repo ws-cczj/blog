@@ -1,13 +1,32 @@
 body {
-    background-image: url('../images/IDEA-Bg.png') !important;
+    background-image: url('../images/picture4.jpg') !important;
     background-attachment: fixed !important;
     background-position: center 0 !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     -webkit-background-size: cover !important;
     -o-background-size: cover !important;
+    filter: alpha(opacity=80) !important;
+    opacity: 0.8 !important;
+    /*-webkit-filter:opacity(0.8) !important;*/
+    /*opacity: 0.8 !important;*/
+    /*rgba(255,255,255,0.8) !important;*/
+    /* hsla(0,0%,100%,.8)!important;*/
+    /* rgba(0,0,0,.8);*/
 }
 
+img {
+    opacity: 0.8 !important;
+    filter: alpha(opacity=80) !important;
+}
+
+img:hover {
+    opacity: 1.0 !important;
+    filter: alpha(opacity=100) !important;
+}
+
+
+/*--------padding-------*/
 .m-padded-min {
     /*因为 semantic UI中是有优先级大小的，所以这里需要加上 !important 提高优先级，否则引入无效*/
     padding: 0.2em !important;

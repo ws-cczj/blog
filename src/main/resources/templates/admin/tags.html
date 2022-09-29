@@ -48,38 +48,11 @@
 <!-- 中间内容 -->
 <div class="m-padded-tb-big m-container-small">
     <div class="ui container">
-        <form action="#" method="post" class="ui segment form">
-            <div class="ui mini positive message" th:unless="${#strings.isEmpty(msg)}" th:text="${msg}">
-                操作失败~
-            </div>
-            <div class="inline fields">
-                <div class="field">
-                    <input type="text" name="title" placeholder="标题">
-                </div>
-                <div class="field">
-                    <div class="ui dropdown selection">
-                        <input type="hidden" name="type">
-                        <i class="icon dropdown"></i>
-                        <div class="default text">标签</div>
-                        <div class="menu">
-                            <div class="item" data-value="1">错误日志</div>
-                            <div class="item" data-value="2">开发者手册</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui checkbox">
-                        <input type="checkbox" id="recommend" name="recommend">
-                        <label for="recommend">推荐</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <button class="ui mini teal basic button">
-                        <i class="icon search"></i>搜索
-                    </button>
-                </div>
-            </div>
-        </form>
+        <div class="ui message success" th:unless="${#strings.isEmpty(msg)}">
+            <i class="close icon"></i>
+            <div class="header">提示:</div>
+            <p th:text="${msg}">管理员操作成功~</p>
+        </div>
         <table class="ui teal table">
             <thead>
             <tr>
