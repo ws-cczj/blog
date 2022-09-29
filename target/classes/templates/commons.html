@@ -15,7 +15,7 @@
 <nav th:fragment="menu(pageId)"
      class="ui inverted attached segment m-padded-tb-min m-shadow-small m-fixed-nav m-opacity-tiny">
     <div class="ui container">
-        <div class="ui inverted secondary stackable menu">
+        <div class="ui inverted secondary stackable menu m-mobile-show">
             <h2 class="ui teal header item">cczjBlog</h2>
             <a class="m-item item m-mobile-hide" th:href="@{/}" th:classappend="${pageId==1} ? 'active'"
                href="./index.html"><i

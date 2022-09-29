@@ -253,4 +253,8 @@ img:hover {
     .m-mobile-wide {
         width: 100% !important;
     }
+
+    .m-mobile-show {
+        background-color: #0a001f !important;
+    }
 }
