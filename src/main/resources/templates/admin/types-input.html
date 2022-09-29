@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- 用于移动端的视图缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客分类新增页面</title>
+    <link th:include="admin/commons_admin::head">
+</head>
+<body>
+
+<!-- 导航栏 -->
+<!-- m-padded-tb-min my-padding-topAndBottom-min -->
+<nav th:replace="admin/commons_admin::menu(2)" class="ui inverted attached segment m-padded-tb-min m-shadow-small">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">管理后台</h2>
+            <a class="m-item item m-mobile-hide" href="blog.html"><i class="home icon"></i>博客</a>
+            <a class="m-item item m-mobile-hide" href="types.html"><i class="idea icon"></i>分类</a>
+            <a class="m-item item m-mobile-hide" href="tags.html"><i class="tags icon"></i>标签</a>
+            <div class="right m-mobile-hide m-item menu">
+                <div class="ui dropdown item">
+                    <div class="text">
+                        <img th:src="@{/images/avatar_min.jpg}" alt="管理员头像" class="ui avatar image">
+                        cczj
+                    </div>
+                    <i class="icon dropdown"></i>
+                    <div class="menu">
+                        <a href="#" class="item">注销</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 这里的menu 和 toggle 没有具体效果 只是为了用class来获取元素 -->
+    <a href="#" class="ui button menu toggle icon black m-right-top m-mobile-show">
+        <i class="icon sidebar"></i>
+    </a>
+</nav>
+<div class="ui attached pointing menu">
+    <div class="ui container">
+        <div class="right menu">
+            <a href="#" th:href="@{/admin/types/input}" class="active teal item">新增</a>
+            <a href="#" th:href="@{/admin/types}" class="teal item">列表</a>
+        </div>
+    </div>
+</div>
+<!-- 中间内容 -->
+<div class="m-padded-tb-big m-container-small">
+    <div class="ui container">
+        <form action="#" method="post" class="ui form" th:object="${type}" th:action="@{/admin/types}">
+            <div class="ui error message"></div>
+            <div class="ui mini negative message" th:unless="${#strings.isEmpty(msg)}" th:text="${msg}">
+                分类名错误
+            </div>
+            <input type="hidden" name="id" th:value="*{id}">
+            <div class="required field">
+                <div class="ui left action labeled input">
+                    <label class="ui basic compact teal label">名称</label>
+                    <input type="text" name="name" placeholder="分类名称" th:value="*{name}">
+                </div>
+            </div>
+            <div class="ui right aligned container">
+                <!-- window.history.go(-1) 哪个页面过来，点击这个按钮就返回过去 -->
+                <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
+                <button class="ui submit teal button">提交</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- script -->
+<!--/*/<th:block th:replace="admin/commons_admin::script">/*/-->
+<!--/*/</th:block>/*/-->
+<script>
+    $('.ui.dropdown').dropdown({
+        on: 'hover',
+    });
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+    $('.ui.form').form({
+        fields: {
+            name: {
+                identifier: 'name',
+                rules: [{
+                    type: 'empty',
+                    prompt: '请输入博客分类名称'
+                }]
+            }
+        }
+    });
+</script>
+</body>
+</html>

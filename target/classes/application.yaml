@@ -1,0 +1,26 @@
+spring:
+  thymeleaf:
+    cache: false
+  datasource:
+    url: jdbc:mysql://121.4.113.241:3306/blog?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 541688
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      use-new-id-generator-mappings: false
+    show-sql: true
+  mvc:
+    format:
+      date-time: yyyy-MM-dd HH:mm:ss
+logging:
+  level:
+    root: info
+    com.cczj: debug
+  file:
+    path: log/blog.log
+
+comment.avatar: /images/avatar_friend.png
+server:
+  port: 80

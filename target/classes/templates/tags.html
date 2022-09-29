@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- 用于移动端的视图缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客标签页</title>
+    <link th:include="commons::head">
+</head>
+<body>
+
+<!-- 导航栏 -->
+<!-- m-padded-tb-min my-padding-topAndBottom-min -->
+<nav th:replace="commons::menu(3)"></nav>
+<!-- Nav follow page -->
+<div style="height: 70px"></div>
+
+<!-- 中间内容 -->
+<div id="waypoint" class="m-padded-tb-big m-container-small animate__animated animate__fadeInLeft">
+    <div class="ui container">
+        <!-- header -->
+        <div class="ui top attached segment">
+            <div class="ui middle aligned two column grid">
+                <div class="column">
+                    <h3 class="ui teal header">标签</h3>
+                </div>
+                <div class="right aligned column">
+                    共
+                    <h2 class="ui orange header m-inline-block m-text-thin"
+                        th:text="${#arrays.length(tags)}"> 14
+                    </h2>
+                    篇
+                </div>
+            </div>
+        </div>
+        <div class="ui attached segment m-padded-tb-large">
+            <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" th:each="tag : ${tags}"
+               th:classappend="${tag.id==activeTagId} ? 'green'"
+               class="ui basic large label left pointing m-margin-tb-tiny">
+                <span th:text="${tag.name}"></span>
+                <div class="detail" th:text="${#arrays.length(tag.blogs)}">11</div>
+            </a>
+        </div>
+        <!-- content -->
+        <div class="ui segment teal js-toc-content">
+            <div class="ui segment" th:each="blog : ${page.content}">
+                <div class="ui padded vertical segment m-padded-tb-large m-mobile-lr-clear">
+                    <!-- mobile reversed （手机端显示时图片至上） stackable (手机端时堆叠放置) -->
+                    <div class="ui grid mobile reversed stackable">
+                        <div class="eleven wide column">
+                            <h3 th:text="${blog.title}">你想要宝藏吗？那就快来大海上吧! </h3>
+                            <p th:text="|${blog.description}...|" class="m-text">这是一件非常美好的事物这是一件非常美好的事物这是一件非常美好的事物<br>这是一件非常美好的事物这是一件非常美好的事物
+                            </p>
+                            <div class="ui stackable grid">
+                                <div class="row">
+                                    <div class="eleven wide column">
+                                        <div class="ui mini horizontal link list">
+                                            <div class="item">
+                                                <img th:src="@{${blog.user.avatar}}" alt="" class="ui avatar image">
+                                                <div class="content">
+                                                    <a class="header" th:href="@{/about}"
+                                                       th:text="${blog.user.nickname}" href="#">Lost in timer</a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <i class="calendar icon"></i><span
+                                                    th:text="${#dates.format(blog.updateTime, 'yyyy-MM-dd')}">2022-9-20</span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="eye icon"></i>
+                                                <span th:class="m-margin-lr-tiny"
+                                                      th:text="${blog.views}"> 2342
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right aligned five wide column">
+                                        <a href="#" th:href="@{/types/{id}(id=${blog.type.id})}"
+                                           class="ui purple basic label m-padded-tiny" th:text="${blog.type.name}">
+                                            认知升级
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <a href="#" th:href="@{/tags/{id}(id=${tag.id})}"
+                                           th:each="tag : ${blog.tags}" th:text="${tag.name}"
+                                           th:classappend="${tag.id==activeTagId} ? 'teal'"
+                                           class="ui basic left pointing label m-padded-min m-text-thin">
+                                            JAVA
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="five wide column">
+                            <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
+                                <img th:src="@{${blog.firstPicture}}" alt="文章展示图" class="ui rounded image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="ui bottom attached segment" th:if="${page.totalPages} > 1">
+            <div class="ui middle aligned two column grid">
+                <div class="column">
+                    <a href="#" th:unless="${page.first}" th:href="@{/tags(page = ${page.number} - 1)}"
+                       class="ui basic blue mini button">上一页</a>
+                </div>
+                <div class="right aligned column">
+                    <a href="#" th:unless="${page.last}" th:href="@{/tags(page = ${page.number} + 1)}"
+                       class="ui basic blue mini button">下一页</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 侧边提示栏 -->
+<div id="toolbar" class="m-padded m-fixed m-right-bottom" style="display: none">
+    <div class="ui vertical icon buttons">
+        <button type="button" class="ui toc violet button">目录</button>
+        <div id="toTop-button" class="ui icon button"><i class="chevron up icon"></i>顶部</div>
+    </div>
+</div>
+
+<!-- 目录 -->
+<div class="ui top-container flowing popup transition hidden" style="width: 250px !important;">
+    <ol class="js-toc"></ol>
+</div>
+
+<footer th:replace="commons::footer"></footer>
+
+<!-- script_src -->
+<!--/*/<th:block th:replace="commons::script">/*/-->
+<!--/*/</th:block>/*/-->
+
+</body>
+</html>

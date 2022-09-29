@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- copy head content -->
+<div th:fragment="head">
+    <link rel="shortcut icon" href="../images/favicon_cczj.ico" th:href="@{/images/favicon_cczj.ico}">
+    <link rel="stylesheet" href="../lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
+    <link rel="stylesheet" href="../lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
+    <link rel="stylesheet" href="../css/animate.css" th:href="@{/css/animate.css}">
+    <link rel="stylesheet" href="../css/typo.css}" th:href="@{/css/typo.css}">
+    <link rel="stylesheet" href="../css/myDiy.css}" th:href="@{/css/myDiy.css}">
+    <link rel="stylesheet" href="../css/semantic.min.css" th:href="@{/css/semantic.min.css}">
+</div>
+<!-- copy nav content -->
+<nav th:fragment="menu(pageId)"
+     class="ui inverted attached segment m-padded-tb-min m-shadow-small m-fixed-nav m-opacity-tiny">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">cczjBlog</h2>
+            <a class="m-item item m-mobile-hide" th:href="@{/}" th:classappend="${pageId==1} ? 'active'"
+               href="./index.html"><i
+                    class="home icon"></i>首页</a>
+            <a class="m-item item m-mobile-hide" th:href="@{/types/-1}" th:classappend="${pageId==2} ? 'active'"
+               href="./types.html"><i
+                    class="idea icon"></i>分类</a>
+            <a class="m-item item m-mobile-hide" th:href="@{/tags/-1}" th:classappend="${pageId==3} ? 'active'"
+               href="./tags.html"><i
+                    class="tags icon"></i>标签</a>
+            <a class="m-item item m-mobile-hide" th:href="@{/archives}" th:classappend="${pageId==4} ? 'active'"
+               href="./archives.html"><i
+                    class="clone icon"></i>归档</a>
+            <a class="m-item item m-mobile-hide" th:href="@{/about}" th:classappend="${pageId==5} ? 'active'"
+               href="./about.html"><i
+                    class="info icon"></i>关于我</a>
+            <div class="m-item right item m-mobile-hide">
+                <form name="search" action="#" th:action="@{/search}" method="post">
+                    <div class="ui icon input"> <!--transparent 透明 inverted反转颜色 -->
+                        <input type="text" name="query" placeholder="search..." th:value="${query}">
+                        <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                    </div>
+                </form>
+            </div>
+            <div th:if="${#session.getAttribute('user')!=null}" class="right m-mobile-hide m-item menu">
+                <div class="ui dropdown item">
+                    <div class="text">
+                        <img th:src="@{${#session.getAttribute('user').avatar}}" alt="管理员头像" class="ui avatar image">
+                        [[${#session.getAttribute('user').username}]]
+                    </div>
+                    <i class="icon dropdown"></i>
+                    <div class="menu">
+                        <a th:href="@{/admin/logout}" class="item">注销</a>
+                    </div>
+                </div>
+            </div>
+            <div th:if="${#session.getAttribute('user')==null}" class="right m-mobile-hide m-item menu">
+                <div class="ui dropdown item">
+                    <div class="text">
+                        <img th:src="@{/images/avatar_friend.png}" alt="游客头像" class="ui avatar image">
+                        游客
+                    </div>
+                    <i class="icon dropdown"></i>
+                    <div class="menu">
+                        <a th:href="@{/admin}" class="item">登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 这里的menu 和 toggle 没有具体效果 只是为了用class来获取元素 -->
+    <a href="#" class="ui button menu toggle icon black m-right-top m-mobile-show">
+        <i class="icon sidebar"></i>
+    </a>
+</nav>
+<!-- copy sidebar content -->
+<div th:fragment="sidebar">
+</div>
+<!-- copy footer content -->
+<footer th:fragment="footer" class="ui inverted vertical segment m-padded-tb-massive m-opacity-tiny">
+    <div class="ui center aligned container">
+        <div class="ui inverted stackable grid divided">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img class="ui rounded image" th:src="@{/images/showTime.gif}" alt="动态图" style="width: 110px">
+                    </div>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+                <div id="newBlog-container">
+                    <div class="ui inverted link list" th:fragment="newBlogList">
+                        <a class="item" href="#"
+                           th:href="@{/blog/{id}(id=${blog.id})}"
+                           th:each="blog : ${newBlogs}" th:text="${blog.title}">
+                            小城故事 {User Story}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">联系我们</h4>
+                <div class="ui inverted link list">
+                    <p class="item">Email yikeshuoguo@qq.com</p>
+                    <p class="item">QQ 1844664313</p>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">Blog</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-mini">
+                    这是我的个人博客，会分享关于编程学习经历，个人日常生活等内容。希望可以给来到这里的你带来一些帮助...</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2022-2023 cczj Designed by cczj. </p>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny"><a
+                href="http://icp.chinaz.com/home/info?host=xiongsihao.com">豫公网安备41112202000195号</a></p>
+
+        <div style="width:300px;margin:0 auto; padding:1px 0; ">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=36098102000147"
+               style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img
+                    src="../images/record.png" th:src="@{/images/record.png}" style="float:left;"/>
+                <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#ff1c04;">
+                    豫ICP备2022010704号</p></a>
+        </div>
+        <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    </div>
+</footer>
+<div th:fragment="snow">
+    <canvas id="c_n36" width="1487" height="431"
+            style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;"></canvas>
+    <div style="position: fixed; z-index: 9999; top: 120.702px; left: 1068.2px; opacity: 0.922782; font-size: 11.4877px; color: rgb(175, 218, 239);">
+        ❄
+    </div>
+    <div style="position: fixed; z-index: 9999; top: 120.702px; left: 1068.2px; opacity: 0.922782; font-size: 11.4877px; color: rgb(175, 218, 239);">
+        ❄
+    </div>
+    <div style="position: fixed; z-index: 9999; top: 120.702px; left: 1068.2px; opacity: 0.922782; font-size: 11.4877px; color: rgb(175, 218, 239);">
+        ❄
+    </div>
+</div>
+<!-- script -->
+<th:block th:fragment="script">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../js/semantic.min.js" th:src="@{/js/semantic.min.js}"></script>
+    <script src="../lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
+    <script src="../lib/tocbot/tocbot.js" th:src="@{/lib/tocbot/tocbot.js}"></script>
+    <script src="../lib/qrCode/qrcode.js" th:src="@{/lib/qrCode/qrcode.js}"></script>
+    <script src="../lib/jQueryScroll/jquery.scrollTo.js" th:src="@{/lib/jQueryScroll/jquery.scrollTo.js}"></script>
+    <script src="../lib/wayPoints/jquery.waypoints.js" th:src="@{/lib/wayPoints/jquery.waypoints.js}"></script>
+    <!--博客美化效果-->
+    <!--单击显示文字-->
+    <script type="text/javascript" th:src="@{/js/click_show_text.js}" src="../js/click_show_text.js"></script>
+    <script type="text/javascript"
+            color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+            src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>
+    <!-- 雪花特效 -->
+    <script type="text/javascript" th:src="@{/js/snow.js}" src="../js/snow.js"></script>
+    <script>
+        $('.ui.dropdown').dropdown({
+            on: 'hover',
+        });
+        <!-- footer blogs share load -->
+        $('#newBlog-container').load(/*[[@{/footer/newBlog}]]*/"/footer/newBlog");
+
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        });
+        $('#payButton').popup({
+            popup: $('.payQR.popup'),
+            on: 'click',
+            position: 'bottom center'
+        });
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.js-toc', // -- 你想将目录显示在哪里
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '.js-toc-content',// -- 想要被生成目录的内容
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1, h2, h3',// -- 显示目录的层级
+            // For headings inside relative or absolute positioned containers within content.
+            hasInnerContainers: true,
+        });
+        $('.toc.button').popup({
+            popup: $('.top-container'),
+            on: 'click',
+            position: 'left center'
+        });
+        <!-- show of your wechat picture -->
+        $('.wechat').popup({
+            popup: $('.ui.wechat_qr'),
+            position: 'left center'
+        });
+        <!-- Page sidebar scroll -->
+        $('#toTop-button').click(function () {
+            $(window).scrollTo(0, 500)
+        });
+        <!-- page monitor -->
+        var waypoint = new Waypoint({
+            element: document.getElementById('waypoint'),
+            handler: function (direction) {
+                if (direction === 'down') {
+                    $('#toolbar').show(500)
+                } else {
+                    $('#toolbar').hide(500)
+                }
+            }
+        });
+        <!-- blogs web already is builded Time -->
+        var now = new Date();
+
+        function createtime() {
+            var grt = new Date("09/25/2022 21:43:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+            now.setTime(now.getTime() + 250);
+            days = (now - grt) / 1000 / 60 / 60 / 24;
+            dnum = Math.floor(days);
+            hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+            hnum = Math.floor(hours);
+            if (String(hnum).length === 1) {
+                hnum = "0" + hnum;
+            }
+            minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+            mnum = Math.floor(minutes);
+            if (String(mnum).length === 1) {
+                mnum = "0" + mnum;
+            }
+            seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+            snum = Math.round(seconds);
+            if (String(snum).length === 1) {
+                snum = "0" + snum;
+            }
+            document.getElementById("timeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+        }
+
+        setInterval("createtime()", 500);
+    </script>
+</th:block>
+</html>
