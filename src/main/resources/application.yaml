@@ -26,3 +26,6 @@ logging:
 comment.avatar: /images/avatar_friend.png
 server:
   port: 80
+  reactive:
+    session:
+      timeout: 300

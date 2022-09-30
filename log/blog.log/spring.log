@@ -727,3 +727,6 @@ java.lang.IllegalArgumentException: Attribute name cannot be null or empty
 2022-09-29 13:55:19.074  INFO 5360 --- [http-nio-80-exec-1] com.cczj.blog.aspect.LogAspects          : Result : index
 2022-09-29 13:55:20.091  INFO 5360 --- [http-nio-80-exec-4] com.cczj.blog.aspect.LogAspects          : Request : {url='http://localhost/footer/newBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.cczj.blog.controller.IndexController.newBlogs', args=[{}]}
 2022-09-29 13:55:20.270  INFO 5360 --- [http-nio-80-exec-4] com.cczj.blog.aspect.LogAspects          : Result : commons :: newBlogList
+2022-09-29 13:56:55.347  INFO 5360 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-29 13:56:55.348  INFO 5360 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-29 13:56:55.355  INFO 5360 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
