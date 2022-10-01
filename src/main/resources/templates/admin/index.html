@@ -42,7 +42,7 @@
     <div class="ui container">
         <div class="ui success large message">
             <h3>Hi,</h3>
-            <p>捶捶自己,欢迎登录~~</p>
+            <p th:text="|${#session.getAttribute('user').nickname},欢迎登录 + '~~'|"></p>
         </div>
         <img th:src="@{/images/IDEA-Bg.png}" alt="login_picture" class="ui rounded bordered fluid image">
     </div>

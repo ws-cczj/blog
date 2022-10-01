@@ -65,6 +65,6 @@ public final class Md5Util {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        System.out.println(encodeByMd5("541688"));
+        System.out.println(encodeByMd5(""));
     }
 }

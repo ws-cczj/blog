@@ -26,3 +26,12 @@ logging:
 comment.avatar: /images/avatar_friend.png
 server:
   port: 80
+  reactive:
+    session:
+      timeout: 300
+#七牛云配置
+qiniu:
+  accessKey: 73V3Xpo-NYxScwvnBQzmCacyz9v3STM5sqqkHX69
+  secretKey: l5H6z-Xz6Ll5SpVaaZTV5sSfu411KQ_pmUDkNf7v
+  bucket: rj0lezld9.hb-bkt.clouddn.com
+  path: http://rj0lezld9.hb-bkt.clouddn.com

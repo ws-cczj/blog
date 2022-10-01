@@ -21,8 +21,8 @@
             <div class="right m-mobile-hide m-item menu">
                 <div class="ui dropdown item">
                     <div class="text">
-                        <img th:src="@{/images/avatar_min.jpg}" alt="管理员头像" class="ui avatar image">
-                        cczj
+                        <img th:src="@{${#session.getAttribute('user').avatar}}" alt="管理员头像" class="ui avatar image">
+                        [[${#session.getAttribute('user').username}]]
                     </div>
                     <i class="icon dropdown"></i>
                     <div class="menu">
