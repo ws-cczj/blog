@@ -31,7 +31,7 @@
         </div>
         <!-- 归档区 -->
         <th:block th:each="item : ${archiveMap}">
-            <h2 class="ui center aligned header" th:text="${item.key}">2022</h2>
+            <h2 class="ui teal center aligned header" th:text="${item.key}">2022</h2>
             <div class="ui fluid vertical menu">
                 <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item"
                    th:each="blog : ${item.value}">
@@ -50,7 +50,6 @@
 <div id="toolbar" class="m-padded m-fixed m-right-bottom" style="display: none">
     <div class="ui vertical icon buttons">
         <button type="button" class="ui toc violet button">目录</button>
-        <button class="ui wechat icon button"><i class="weixin green icon"></i></button>
         <div id="toTop-button" class="ui icon button"><i class="chevron up icon"></i>顶部</div>
     </div>
 </div>
@@ -58,10 +57,6 @@
 <!-- 目录 -->
 <div class="ui top-container flowing popup transition hidden" style="width: 250px !important;">
     <ol class="js-toc"></ol>
-</div>
-<!-- 二维码 -->
-<div id="qrcode" class="ui wechat_qr flowing popup transition hidden" style="width: 130px !important;">
-    <!--    <img src="./static/images/wechat.jpg" alt="微信" class="ui image rounded" style="width: 120px">-->
 </div>
 
 <footer th:replace="commons::footer"></footer>
