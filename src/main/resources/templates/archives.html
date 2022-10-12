@@ -38,7 +38,8 @@
                 <span>
                     <i class="mini green circle icon"></i>
                     <span th:text="${blog.title}">关于学JAVA是怎么入土的</span>
-                    <div class="ui teal basic label m-padded-min" th:text="|${#dates.format(blog.createTime,'MMMdd')}日|">9月27日</div>
+                    <div class="ui teal basic label m-padded-min"
+                         th:text="|${#dates.format(blog.createTime,'MMMdd')}日|">9月27日</div>
                 </span>
                     <div class="ui orange left pointing basic label m-padded-min" th:text="${blog.flag}">原创</div>
                 </a>

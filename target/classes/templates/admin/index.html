@@ -21,7 +21,7 @@
             <div class="right m-mobile-hide m-item menu">
                 <div class="ui dropdown item">
                     <div class="text">
-                        <img th:src="@{/images/avatar_min.jpg}" alt="管理员头像" class="ui avatar image">
+                        <img src="http://cdn.cczjblog.top/cczjBlog-img/avatar_min_cczj.jpg" alt="管理员头像" class="ui avatar image">
                         cczj
                     </div>
                     <i class="icon dropdown"></i>
@@ -42,9 +42,10 @@
     <div class="ui container">
         <div class="ui success large message">
             <h3>Hi,</h3>
-            <p>捶捶自己,欢迎登录~~</p>
+            <p th:text="|${#session.getAttribute('user').nickname},欢迎登录~~|"></p>
         </div>
-        <img th:src="@{/images/IDEA-Bg.png}" alt="login_picture" class="ui rounded bordered fluid image">
+        <img src="http://cdn.cczjblog.top/cczjBlog-img/cczj_IDEA-Bg.png" alt="login_picture"
+             class="ui rounded bordered fluid image">
     </div>
 </div>
 

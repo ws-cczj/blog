@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <!-- copy head content -->
 <div th:fragment="head">
-    <link rel="shortcut icon" href="../images/favicon_cczj.ico" th:href="@{/images/favicon_cczj.ico}">
+    <link rel="shortcut icon" href="http://cdn.cczjblog.top/cczjBlog-img/favicon_cczj.ico">
     <link rel="stylesheet" href="../lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
     <link rel="stylesheet" href="../lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
     <link rel="stylesheet" href="../css/animate.css" th:href="@{/css/animate.css}">
@@ -55,7 +55,7 @@
             <div th:if="${#session.getAttribute('user')==null}" class="right m-mobile-hide m-item menu">
                 <div class="ui dropdown item">
                     <div class="text">
-                        <img th:src="@{/images/avatar_friend.png}" alt="游客头像" class="ui avatar image">
+                        <img src="http://cdn.cczjblog.top/cczjBlog-img/avatar_friend_cczj.png" alt="游客头像" class="ui avatar image">
                         游客
                     </div>
                     <i class="icon dropdown"></i>
@@ -81,7 +81,8 @@
             <div class="three wide column">
                 <div class="ui inverted link list">
                     <div class="item">
-                        <img class="ui rounded image" th:src="@{/images/showTime.gif}" alt="动态图" style="width: 110px">
+                        <img class="ui rounded image" src="http://cdn.cczjblog.top/cczjBlog-img/cczj_showTime.gif"
+                             alt="动态图" style="width: 110px">
                     </div>
                 </div>
             </div>
@@ -120,7 +121,7 @@
                style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img
                     src="../images/record.png" th:src="@{/images/record.png}" style="float:left;"/>
                 <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#ff1c04;">
-                    豫ICP备2022010704号</p></a>
+                    豫ICP备2022023861号</p></a>
         </div>
         <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
     </div>
