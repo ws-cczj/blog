@@ -4,9 +4,9 @@
 <div th:fragment="head">
     <link rel="shortcut icon" href="http://cdn.cczjblog.top/cczjBlog-img/favicon_cczj.ico">
     <link rel="stylesheet" href="../lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
-    <link rel="stylesheet" href="../lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
     <link rel="stylesheet" href="../css/animate.css" th:href="@{/css/animate.css}">
     <link rel="stylesheet" href="../css/typo.css}" th:href="@{/css/typo.css}">
+    <link rel="stylesheet" href="../lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
     <link rel="stylesheet" href="../css/myDiy.css}" th:href="@{/css/myDiy.css}">
     <link rel="stylesheet" href="../css/APlayer.min.css" th:href="@{/css/APlayer.min.css}">
     <link rel="stylesheet" href="../css/semantic.min.css" th:href="@{/css/semantic.min.css}">
@@ -55,7 +55,8 @@
             <div th:if="${#session.getAttribute('user')==null}" class="right m-mobile-hide m-item menu">
                 <div class="ui dropdown item">
                     <div class="text">
-                        <img src="http://cdn.cczjblog.top/cczjBlog-img/avatar_friend_cczj.png" alt="游客头像" class="ui avatar image">
+                        <img src="http://cdn.cczjblog.top/cczjBlog-img/avatar_friend_cczj.png" alt="游客头像"
+                             class="ui avatar image">
                         游客
                     </div>
                     <i class="icon dropdown"></i>
