@@ -16,6 +16,8 @@ spring:
   mvc:
     format:
       date-time: yyyy-MM-dd HH:mm:ss
+  session:
+    timeout: 86400
 logging:
   level:
     root: info
@@ -24,8 +26,11 @@ logging:
     path: log/blog.log
 
 comment.avatar: http://cdn.cczjblog.top/cczjBlog-img/avatar_friend_cczj.png
+# 处理首次访问网站url后缀带有jsessionid的问题
 server:
   port: 80
-  reactive:
+  servlet:
     session:
-      timeout: 86400
+      tracking-modes: cookie
+      cookie:
+        http-only: true
