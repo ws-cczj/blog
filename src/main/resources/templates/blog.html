@@ -137,7 +137,7 @@
                                     </a>
                                     <div class="content">
                                         <a class="author">
-                                            <span th:text="${reply.avatar}!='/images/avatar_friend.png' ? ${reply.nickname} + ' (管理员)': ${reply.nickname} + ' (游客)'">
+                                            <span th:text="${reply.avatar}!='http://cdn.cczjblog.top/cczjBlog-img/avatar_friend_cczj.png' ? ${reply.nickname} + ' (管理员)': ${reply.nickname} + ' (游客)'">
                                                 小红
                                             </span>
                                             <span class="m-teal" th:text="'@ ' + ${reply.parentComment.nickname}">
