@@ -1,6 +1,7 @@
 package com.cczj.blog.service.Impl;
 
 import com.cczj.blog.dao.BlogRepository;
+import com.cczj.blog.dao.CommentRepository;
 import com.cczj.blog.pojo.Blog;
 import com.cczj.blog.pojo.Type;
 import com.cczj.blog.service.BlogService;
@@ -30,6 +31,8 @@ import java.util.*;
 public class BlogServiceImpl implements BlogService {
     @Autowired
     private BlogRepository blogRepository;
+    @Autowired
+    private CommentRepository commentRepository;
 
     @Transactional
     @Override
@@ -143,6 +146,8 @@ public class BlogServiceImpl implements BlogService {
     @Transactional
     @Override
     public void deleteBlog(Long id) {
+        commentRepository.deleteByBlogIdAndParentCommentNotNull(id);
+        commentRepository.deleteByBlogId(id);
         blogRepository.deleteById(id);
     }
 }

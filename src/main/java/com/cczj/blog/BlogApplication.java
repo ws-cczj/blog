@@ -16,5 +16,4 @@ public class BlogApplication extends SpringBootServletInitializer implements Web
     public static void main(String[] args) {
         SpringApplication.run(BlogApplication.class, args);
     }
-
 }

@@ -3,13 +3,13 @@
 <!-- copy head content -->
 <div th:fragment="head">
     <link rel="shortcut icon" href="http://cdn.cczjblog.top/cczjBlog-img/favicon_cczj.ico">
-    <link rel="stylesheet" href="../lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
-    <link rel="stylesheet" href="../css/animate.css" th:href="@{/css/animate.css}">
+    <link rel="stylesheet" href="../css/semantic.min.css" th:href="@{/css/semantic.min.css}">
     <link rel="stylesheet" href="../css/typo.css}" th:href="@{/css/typo.css}">
+    <link rel="stylesheet" href="../css/animate.css" th:href="@{/css/animate.css}">
     <link rel="stylesheet" href="../lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
+    <link rel="stylesheet" href="../lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
     <link rel="stylesheet" href="../css/myDiy.css}" th:href="@{/css/myDiy.css}">
     <link rel="stylesheet" href="../css/APlayer.min.css" th:href="@{/css/APlayer.min.css}">
-    <link rel="stylesheet" href="../css/semantic.min.css" th:href="@{/css/semantic.min.css}">
 </div>
 <!-- copy nav content -->
 <nav th:fragment="menu(pageId)"
@@ -1756,14 +1756,14 @@
 <!-- script -->
 <th:block th:fragment="script">
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../js/APlayer.min.js" th:src="@{/js/APlayer.min.js}"></script>
+    <script src="../js/Meting.min.js" th:src="@{/js/Meting.min.js}"></script>
     <script src="../js/semantic.min.js" th:src="@{/js/semantic.min.js}"></script>
+    <script src="../lib/jQueryScroll/jquery.scrollTo.js" th:src="@{/lib/jQueryScroll/jquery.scrollTo.js}"></script>
     <script src="../lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
     <script src="../lib/tocbot/tocbot.js" th:src="@{/lib/tocbot/tocbot.js}"></script>
     <script src="../lib/qrCode/qrcode.js" th:src="@{/lib/qrCode/qrcode.js}"></script>
     <script src="../js/Particleground.js" th:src="@{/js/Particleground.js}"></script>
-    <script src="../js/APlayer.min.js" th:src="@{/js/APlayer.min.js}"></script>
-    <script src="../js/Meting.min.js" th:src="@{/js/Meting.min.js}"></script>
-    <script src="../lib/jQueryScroll/jquery.scrollTo.js" th:src="@{/lib/jQueryScroll/jquery.scrollTo.js}"></script>
     <script src="../lib/wayPoints/jquery.waypoints.js" th:src="@{/lib/wayPoints/jquery.waypoints.js}"></script>
     <!--博客美化效果-->
     <!--单击显示文字-->

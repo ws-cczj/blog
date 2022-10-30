@@ -17,7 +17,7 @@ spring:
     format:
       date-time: yyyy-MM-dd HH:mm:ss
   session:
-    timeout: 86400
+    timeout: 864000
 logging:
   level:
     root: info

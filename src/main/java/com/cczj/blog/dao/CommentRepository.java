@@ -4,6 +4,7 @@ import com.cczj.blog.pojo.Blog;
 import com.cczj.blog.pojo.Comment;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
@@ -17,4 +18,8 @@ import java.util.List;
 public interface CommentRepository extends JpaRepository<Comment, Long> {
 
     List<Comment> findByBlogIdAndParentCommentNull(Long blogId, Sort sort);
+
+    void deleteByBlogIdAndParentCommentNotNull(Long blogId);
+
+    void deleteByBlogId(Long blogId);
 }

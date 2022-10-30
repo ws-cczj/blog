@@ -114,7 +114,7 @@
                             </a>
                             <div class="content">
                                 <a class="author"
-                                   th:text="${comment.avatar}!='/images/avatar_friend.png' ? ${comment.nickname} + ' (管理员)': ${comment.nickname} + ' (游客)'">Lost
+                                   th:text="${comment.avatar}!='http://cdn.cczjblog.top/cczjBlog-img/avatar_friend_cczj.png' ? ${comment.nickname} + ' (管理员)': ${comment.nickname} + ' (游客)'">Lost
                                     in timer</a>
                                 <div class="metadata">
                                     <span class="date"
@@ -243,7 +243,7 @@
 
     <!-- Build qrcode -->
     // var serurl = "http://www.yikeshuoguo.top"
-    var serurl = "121.4.113.241"
+    var serurl = "http://cczjblog.top"
     var url = /*[[@{/blog/{id}(id=${blog.id})}]]*/""
     var qrcode = new QRCode(document.getElementById("qrcode"), {
         text: serurl + url,

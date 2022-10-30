@@ -21,7 +21,8 @@
             <div class="right m-mobile-hide m-item menu">
                 <div class="ui dropdown item">
                     <div class="text">
-                        <img src="http://cdn.cczjblog.top/cczjBlog-img/avatar_min_cczj.jpg" alt="管理员头像" class="ui avatar image">
+                        <img src="http://cdn.cczjblog.top/cczjBlog-img/avatar_min_cczj.jpg" alt="管理员头像"
+                             class="ui avatar image">
                         cczj
                     </div>
                     <i class="icon dropdown"></i>
@@ -118,8 +119,10 @@
                 <tr>
                     <th colspan="7" class="mini vertical">
                         <div class="ui left floated pagination menu" th:if="${page.totalPages} > 1">
-                            <a onclick="page(this)" th:attr="data-page=${page.number} - 1" class="item">上一页</a>
-                            <a onclick="page(this)" th:attr="data-page=${page.number} + 1" class="item">下一页</a>
+                            <a th:unless="${page.first}" onclick="page(this)" th:attr="data-page=${page.number} - 1"
+                               class="item">上一页</a>
+                            <a th:unless="${page.last}" onclick="page(this)" th:attr="data-page=${page.number} + 1"
+                               class="item">下一页</a>
                         </div>
                         <a href="#" th:href="@{/admin/blogs/input}"
                            class="ui right floated teal mini basic button">新增</a>
